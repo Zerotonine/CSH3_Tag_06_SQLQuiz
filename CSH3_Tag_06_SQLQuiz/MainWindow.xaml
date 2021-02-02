@@ -24,8 +24,8 @@
         <DataGrid x:Name="dgAufgabe" Grid.Row="1" Background="LawnGreen" />
         <DataGrid x:Name="dgLösung" Grid.Row="1" Grid.Column="1" Background="LightGoldenrodYellow" />
 
-        <TextBlock x:Name="tbAufgabe" Background="Green" Grid.Row="2" />
-        <TextBox x:Name="txtAntwort" Background="Yellow" Grid.Row="2" Grid.Column="1" Text="Antwort..." FontSize="18"/>
+        <TextBlock x:Name="tbAufgabe" Background="Green" Grid.Row="2" ScrollViewer.HorizontalScrollBarVisibility="Auto" TextWrapping="Wrap" FontSize="14" />
+        <TextBox x:Name="txtAntwort" Background="Yellow" Grid.Row="2" Grid.Column="1" Text="Antwort..." ScrollViewer.HorizontalScrollBarVisibility="Auto" FontSize="14"/>
 
         <Button x:Name="btnDiagram" Content="DB Diagramm anzeigen/ausblenden" Grid.Row="3" Click="btnDiagram_Click"/>
         <Button x:Name="btnAusfuehren" Content="Ausführen" Grid.Column="1" Grid.Row="3" Click="btnAusfuehren_Click"/>

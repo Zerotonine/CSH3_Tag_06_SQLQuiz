@@ -84,8 +84,10 @@ namespace CSH3_Tag_06_SQLQuiz
                 try
                 {
                     dtFrage.Clear();
+                    dtFrage.Columns.Clear();   
                     da = new SqlDataAdapter(Fragen[index].Antwort, conn);
                     da.Fill(dtFrage);
+                    dgAufgabe.ItemsSource = null;
                     dgAufgabe.ItemsSource = dtFrage.DefaultView;
                 }
                 catch
@@ -154,8 +156,10 @@ namespace CSH3_Tag_06_SQLQuiz
                     try
                     {
                         dtAntwort.Clear();
+                        dtAntwort.Columns.Clear();
                         da = new SqlDataAdapter(antwort, conn);
                         da.Fill(dtAntwort);
+                        dgLösung.ItemsSource = null;
                         dgLösung.ItemsSource = dtAntwort.DefaultView;
                     }
                     catch
