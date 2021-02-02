@@ -1,0 +1,33 @@
+﻿<Window x:Class="CSH3_Tag_06_SQLQuiz.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CSH3_Tag_06_SQLQuiz"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Aufgabe" FontSize="24" Background="GreenYellow" TextAlignment="Center"/>
+        <TextBlock Text="Lösung" FontSize="24"  Background="LightYellow" TextAlignment="Center" Grid.Column="1"/>
+
+        <DataGrid x:Name="dgAufgabe" Grid.Row="1" Background="LawnGreen" />
+        <DataGrid x:Name="dgLösung" Grid.Row="1" Grid.Column="1" Background="LightGoldenrodYellow" />
+
+        <TextBlock x:Name="tbAufgabe" Background="Green" Grid.Row="2" />
+        <TextBox x:Name="txtAntwort" Background="Yellow" Grid.Row="2" Grid.Column="1" Text="Antwort..." FontSize="18"/>
+
+        <Button x:Name="btnDiagram" Content="DB Diagramm anzeigen/ausblenden" Grid.Row="3" Click="btnDiagram_Click"/>
+        <Button x:Name="btnAusfuehren" Content="Ausführen" Grid.Column="1" Grid.Row="3" Click="btnAusfuehren_Click"/>
+    </Grid>
+</Window>
